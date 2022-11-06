@@ -48,11 +48,14 @@ app.get('/', (req, res) => {
 // renders the login page
 app.get('/login', (req, res) => {
   res.render('login');
+  
 });
 
 // renders the signup page
 app.get('/signup', (req, res) => {
+ // res.send(' Sign up sucessful');
   res.render('signup');
+  
 });
 
 // renders password reset page
@@ -60,17 +63,22 @@ app.get('/reset', (req, res) => {
   res.render('reset', {error: null, success: null});
 });
 
-
-
-// renders the home page
-app.get('/',(req, res) => {
-    res.send('Welcome to the Post API');
+//renders post page
+app.get('/api/posts', (req, res) => {
+  res.render('post');
 });
 
+
+
+// // renders the home page
+// app.get('/',(req, res) => {
+//     res.send('Welcome to the Post API');
+// });
+
  // handles the signup request for existing users
-app.get('/signup', (req, res) => {
-  res.send('sucess');
- });
+// app.get('/signup', (req, res) => {
+ 
+//  });
 
 
 

@@ -35,7 +35,7 @@ describe('Auth Route', () => {
     const response = await supertest(app).post("/login").send(resetPwd)
    // expect(response.headers["content-type"]).toBe("text/html")
     expect(response.status).toBe(201)
-    expect(response.body.username.toBe("client4")
+    expect(response.body.email.toBe("okey@gmail.com")
     
 )});
 
